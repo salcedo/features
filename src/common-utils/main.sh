@@ -412,7 +412,7 @@ elif [ "${USERNAME}" = "none" ]; then
     USER_GID=0
 fi
 # Create or update a non-root user to match UID/GID.
-group_name="${USERNAME}"
+group_name="${USER_GID}"
 if id -u ${USERNAME} >/dev/null 2>&1; then
     # User exists, update if needed
     if [ "${USER_GID}" != "automatic" ] && [ "$USER_GID" != "$(id -g $USERNAME)" ]; then
