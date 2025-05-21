@@ -433,7 +433,7 @@ else
     if [ "${USER_UID}" = "automatic" ]; then
         useradd -s /bin/bash --gid $USERNAME -m $USERNAME
     else
-        useradd -s /bin/bash --uid $USER_UID --gid $USERNAME -m $USERNAME
+        useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME
     fi
 fi
 
