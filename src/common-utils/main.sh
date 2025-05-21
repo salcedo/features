@@ -431,7 +431,7 @@ else
         groupadd --gid $USER_GID $USERNAME || echo "GID ${USER_GID} already exists. Ignoring."
     fi
     if [ "${USER_UID}" = "automatic" ]; then
-        useradd -s /bin/bash --gid $USERNAME -m $USERNAME
+        useradd -s /bin/bash --gid $USER_GID -m $USERNAME
     else
         useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME
     fi
